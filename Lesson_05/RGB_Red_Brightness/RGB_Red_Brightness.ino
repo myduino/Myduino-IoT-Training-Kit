@@ -5,19 +5,19 @@ void setup() {
 }
 
 void loop() {
-  analogWrite(red,0);
+  analogWrite(red, 0);
   delay(1000);
 
-  analogWrite(red,10);
+  analogWrite(red, 10);
   delay(1000);
 
-  analogWrite(red,20);
+  analogWrite(red, 20);
   delay(1000);
 
-  analogWrite(red,30);
+  analogWrite(red, 30);
   delay(1000);
 
-  analogWrite(red,40);
+  analogWrite(red, 40);
   delay(1000);
 
 }
