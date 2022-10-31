@@ -5,12 +5,12 @@ void setup() {
 }
 
 void loop() {
-    int LDRReading = analogRead (LDR_Pin);
+    int adc = analogRead(LDR_Pin);
     //Read Pin A0 = Dout
-    float Vout = LDRReading*0.00488;
+    float voltage = adc * 0.00488;
     //coonverts reading to Voltage
 
-    Serial.println (Vout);
-    delay (250);
+    Serial.println(voltage);
+    delay(250);
     //just share to slow dowsn the output for easier reading
 }
