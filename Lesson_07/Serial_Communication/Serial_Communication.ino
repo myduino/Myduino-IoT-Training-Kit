@@ -3,7 +3,7 @@ int b = 89;
 int c = 25;
 
 void setup() {
-    Serial.begin (9600);
+    Serial.begin(9600);
 
     Serial.println("Basic Mathematics: ");
 

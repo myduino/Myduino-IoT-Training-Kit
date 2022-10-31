@@ -1,18 +1,16 @@
-
 void setup() {
-    Serial.begin (9600);
+    Serial.begin(9600);
 }
 
 void loop() {
-    float volts = analogRead (A0);
-    volts = (volts * 0.00488);
-    Serial.print ("Voltage :");
-    Serial.println(volts);
+    int adc = analogRead(A0);
+    float voltage = (adc * 0.00488);
+    Serial.print("Voltage: ");
+    Serial.println(voltage);
 
-    if (volts < 2.5){
-      Serial.print ("Low Voltages!");
+    if (voltage < 2.0){
+      Serial.print ("Low voltage!");
     }
       
-    delay (100);
-    
+    delay(100);
 }
