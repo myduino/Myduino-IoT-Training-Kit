@@ -46,7 +46,7 @@ void loop() {
   if (millis() - previousMillis > 1500){
     previousMillis = millis ();
 
-    Blynk.virtualWrite (V1, (int)temperature);
-    Blynk.virtualWrite (V2, (int)humidity);
+    Blynk.virtualWrite(V2, (int)temperature);
+    Blynk.virtualWrite(V3, (int)humidity);
   }
 }
