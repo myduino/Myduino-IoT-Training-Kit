@@ -18,3 +18,8 @@ Arduino example sketches for Myduino IoT Training Kit lessons
 * [Lesson 14](https://github.com/myinvent/Myduino-IoT-Training-Kit/tree/main/Lesson_14)
 * [Lesson 15](https://github.com/myinvent/Myduino-IoT-Training-Kit/tree/main/Lesson_15)
 * [Lesson 16](https://github.com/myinvent/Myduino-IoT-Training-Kit/tree/main/Lesson_16)
+
+We also added additional lesson example code for connecting data to [Favoriot](https://platform.favoriot.com/) IoT platform.
+
+* [Update sensor's data to Favoriot using HTTP protocol](https://github.com/myinvent/Myduino-IoT-Training-Kit/tree/main/Update_Sensor_Data_to_Favoriot_using_HTTP/Update_Sensor_Data_to_Favoriot_using_HTTP.ino)
+* [Update sensor's data to Favoriot using MQTT protocol](https://github.com/myinvent/Myduino-IoT-Training-Kit/tree/main/Update_Sensor_Data_to_Favoriot_using_MQTT/Update_Sensor_Data_to_Favoriot_using_MQTT.ino)
