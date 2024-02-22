@@ -6,11 +6,10 @@
 
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
-#include <SimpleDHT.h>
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "YourWiFiName";
-char pass[] = "YourWiFiPassword";
+char ssid[] = "YOUR_WIFI_SSID";
+char pass[] = "YOUR_WIFI_PASSWORD";
 
 BLYNK_WRITE(V0) {
   int value = param.asInt();
@@ -24,6 +23,20 @@ BLYNK_WRITE(V1) {
 
   pinMode(D2, OUTPUT);
   digitalWrite(D2, value);
+}
+
+BLYNK_WRITE(V2) {
+  int value = param.asInt();
+
+  pinMode(D3, OUTPUT);
+  digitalWrite(D3, value);
+}
+
+BLYNK_WRITE(V3) {
+  int value = param.asInt();
+
+  pinMode(D4, OUTPUT);
+  digitalWrite(D4, value);
 }
 
 void setup() {

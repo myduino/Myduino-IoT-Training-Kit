@@ -9,13 +9,34 @@
 #include <SimpleDHT.h>
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "YourWiFiName";
-char pass[] = "YourWiFiPassword";
+char ssid[] = "YOUR_WIFI_SSID";
+char pass[] = "YOUR_WIFI_PASSWORD";
 
 unsigned long previousMillis = 0;
 
 int pinDHT11 = D4;
 SimpleDHT11 dht11(pinDHT11);
+
+BLYNK_WRITE(V0) {
+  int value = param.asInt();
+
+  pinMode(D1, OUTPUT);
+  digitalWrite(D1, value);
+}
+
+BLYNK_WRITE(V1) {
+  int value = param.asInt();
+
+  pinMode(D2, OUTPUT);
+  digitalWrite(D2, value);
+}
+
+BLYNK_WRITE(V2) {
+  int value = param.asInt();
+
+  pinMode(D3, OUTPUT);
+  digitalWrite(D3, value);
+}
 
 void setup() {
   Serial.begin(9600);
@@ -36,17 +57,13 @@ void loop() {
     return;
   }
 
-  Serial.println("=================================");
-  Serial.println("Sample DHT11...");
-  
-  Serial.print("Sample OK: ");
-  Serial.print((int)temperature); Serial.print(" *C, "); 
-  Serial.print((int)humidity); Serial.println(" H");
+  Serial.println("Humidity: " + String(humidity) + " %RH");
+  Serial.println("Temperature: " + String(temperature) + " °C");
 
   if (millis() - previousMillis > 1500){
     previousMillis = millis ();
 
-    Blynk.virtualWrite(V2, (int)temperature);
-    Blynk.virtualWrite(V3, (int)humidity);
+    Blynk.virtualWrite(V3, int(humidity));
+    Blynk.virtualWrite(V4, int(temperature));
   }
 }
