@@ -59,7 +59,8 @@ void connectToMqttBroker(){
 
 void messageReceived(String &topic, String &payload) {
   Serial.println("Incoming Data Control: " + payload);
-
+  // 2,1
+  // 2,0
   int commaIndex = payload.indexOf(',');
 
   String pin = payload.substring(0, commaIndex);
