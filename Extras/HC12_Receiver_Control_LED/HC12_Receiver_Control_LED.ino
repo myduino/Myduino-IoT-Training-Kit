@@ -10,7 +10,7 @@ void setup() {
 }
 
 void loop() {
-  // Read data from HC12 and send it to the serial monitor
+  // Read data from HC12 transmitter and control the LED
   if (HC12.available()) {
     
     String data = HC12.readString();
@@ -23,10 +23,5 @@ void loop() {
     }
     
     Serial.println(data);
-  }
-
-  // Read data from the serial monitor and send it to the HC12 module
-  while (Serial.available()) {
-    HC12.write(Serial.read());
   }
 }
