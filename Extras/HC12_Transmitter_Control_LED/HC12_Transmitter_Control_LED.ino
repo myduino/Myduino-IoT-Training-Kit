@@ -8,8 +8,9 @@ void setup() {
 }
 
 void loop() {
-  // Read data from the serial monitor and send it to the HC12 module
-  while (Serial.available()) {
-    HC12.write(Serial.read());
-  }
+  // Send command to the HC12 receiver
+  HC12.print("ON");
+  delay(1000);
+  HC12.print("OFF");
+  delay(1000);
 }
